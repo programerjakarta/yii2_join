@@ -11,6 +11,7 @@ use Yii;
  * @property integer $id_kelas
  * @property string $nama
  * @property string $alamat
+ * @property string $created_date
  *
  * @property Kelas $idKelas
  */
@@ -32,6 +33,7 @@ class Guru extends \yii\db\ActiveRecord
         return [
             [['id_kelas'], 'required'],
             [['id_kelas'], 'integer'],
+            [['created_date'], 'safe'],
             [['nama', 'alamat'], 'string', 'max' => 45]
         ];
     }
@@ -46,6 +48,7 @@ class Guru extends \yii\db\ActiveRecord
             'id_kelas' => 'Id Kelas',
             'nama' => 'Nama',
             'alamat' => 'Alamat',
+            'created_date' => 'Created Date',
         ];
     }
 

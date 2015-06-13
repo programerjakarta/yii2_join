@@ -38,8 +38,8 @@ class Kelas extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_kelas' => 'Id Kelas',
-            'nama_kelas' => 'Nama Kelas',
+            'id_kelas' => 'ID KELAS',
+            'nama_kelas' => 'NAMA KELAS',
         ];
     }
 
