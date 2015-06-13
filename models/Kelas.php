@@ -46,7 +46,7 @@ class Kelas extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getGurus()
+    public function getGuru()
     {
         return $this->hasMany(Guru::className(), ['id_kelas' => 'id_kelas']);
     }
