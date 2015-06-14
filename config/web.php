@@ -11,8 +11,16 @@ $config = [
              'theme' => [
                  'pathMap' => [
                     '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
+                    // '@app/views' => '@app/themes/adminlte'
                  ],
              ],
+        ],
+        'assetManager' => [
+            'bundles' => [
+                'dmstr\web\AdminLteAsset' => [
+                    'skin' => 'skin-black',
+                ],
+            ],
         ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
