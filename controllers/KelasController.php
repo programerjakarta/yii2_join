@@ -32,6 +32,7 @@ class KelasController extends Controller
      */
     public function actionIndex()
     {
+        
         $dataProvider = new ActiveDataProvider([
             'query' => Kelas::find(),
         ]);
