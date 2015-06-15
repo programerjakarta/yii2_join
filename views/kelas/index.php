@@ -15,8 +15,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Create Kelas', ['create'], ['class' => 'btn btn-success']) ?>
+        <?php  var_dump(\Yii::$app->viewPath); ?>
+        <?php  var_dump(\Yii::$app->layoutPath); ?>
+        <?php  var_dump(\Yii::$app->runtimePath); ?>
+        <?php  var_dump(\Yii::$app->vendorPath); ?>
     </p>
 
+    <?php // print_r($this);exit; ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [

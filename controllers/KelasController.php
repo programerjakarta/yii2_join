@@ -14,6 +14,7 @@ use yii\filters\VerbFilter;
  */
 class KelasController extends Controller
 {
+    // public $layout = "main";
     public function behaviors()
     {
         return [
@@ -32,11 +33,18 @@ class KelasController extends Controller
      */
     public function actionIndex()
     {
-        
+
+        var_dump(Yii::getAlias('@app/views/layouts'));
+        // var_dump(Yii::$app->view->theme->pathMap);
+        // Yii::$app->view->theme->pathMap = ['@app/views' => '@webroot/themes/adminlte'];
+        $var = Yii::$app->getLayoutPath();
+        var_dump($var);
+        // Yii::$app->setLayoutPath('@app/views/layouts');
+        // Yii::$app->setLayoutPath('@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app2/layouts');
         $dataProvider = new ActiveDataProvider([
             'query' => Kelas::find(),
         ]);
-
+         // var_dump(\Yii::$app->layoutPath);exit;
         return $this->render('index', [
             'dataProvider' => $dataProvider,
         ]);

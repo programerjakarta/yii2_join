@@ -7,14 +7,7 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
-        'view' => [
-             'theme' => [
-                 'pathMap' => [
-                    '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
-                    // '@app/views' => '@app/themes/adminlte'
-                 ],
-             ],
-        ],
+        
         'assetManager' => [
             'bundles' => [
                 'dmstr\web\AdminLteAsset' => [
@@ -53,6 +46,14 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        'view' => [
+             'theme' => [
+                 'pathMap' => [
+                    '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
+                    // '@app/views' => '@app/themes/adminlte'
+                 ],
+             ],
+        ],
     ],
     'params' => $params,
 ];
